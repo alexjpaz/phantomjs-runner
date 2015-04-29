@@ -3,7 +3,7 @@ var webPage = require('webpage');
 var system = require('system');
 
 var settings = {
-  pageUrl: system.args[1],
+  pageUrl: system.env.PAGE_URL || system.args[1],
   outputPath: '/var/phantomjs/output.jpeg',
   outputFormat: {
     format: 'jpeg',
