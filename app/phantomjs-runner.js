@@ -19,8 +19,9 @@ var page = (function createPage() {
 })();
 
 var ResponseHelper = function(response) {
+  var that = this;
   var timeoutId = setTimeout(function() {
-    this.error('Request timed out', 408);
+    that.error('Request timed out', 408);
   }, settings.requestTimeout);
 
   this.error = function(message, status) {
