@@ -20,7 +20,7 @@ var page = (function createPage() {
 
 var ResponseHelper = function(response) {
   var timeoutId = setTimeout(function() {
-      responseHelper.error('Request timed out', 408);
+    this.error('Request timed out', 408);
   }, settings.requestTimeout);
 
   this.error = function(message, status) {
